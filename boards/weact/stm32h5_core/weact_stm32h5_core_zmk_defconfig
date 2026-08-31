@@ -1,0 +1,17 @@
+# Enable MPU
+CONFIG_ARM_MPU=y
+
+# Enable HW stack protection
+CONFIG_HW_STACK_PROTECTION=y
+
+# Enable GPIO
+CONFIG_GPIO=y
+
+# USB HID
+CONFIG_ZMK_USB=y
+
+# Not on battery power
+CONFIG_USB_SELF_POWERED=n
+
+# Interrupt GPIO is not supported on STM32, but it likely should be
+CONFIG_ZMK_KSCAN_DIRECT_POLLING=y

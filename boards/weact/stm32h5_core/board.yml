@@ -1,0 +1,5 @@
+board:
+  extend: weact_stm32h5_core
+  variants:
+    - name: zmk
+      qualifier: stm32h562xx

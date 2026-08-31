@@ -1,0 +1,6 @@
+if SHIELD_CAVEMAN
+
+config ZMK_KEYBOARD_NAME
+  default "caveman"
+
+endif

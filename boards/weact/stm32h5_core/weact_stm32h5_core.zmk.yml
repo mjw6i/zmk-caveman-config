@@ -1,0 +1,8 @@
+file_format: "1"
+id: weact_stm32h5_core//zmk
+name: STM32H5 Core Board
+type: board
+arch: arm
+outputs:
+  - usb
+url: https://github.com/WeActStudio/WeActStudio.STM32H5_64Pin_CoreBoard

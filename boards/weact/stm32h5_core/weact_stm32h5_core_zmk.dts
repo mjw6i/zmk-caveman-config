@@ -1,0 +1,5 @@
+#include <../boards/weact/stm32h5_core/weact_stm32h5_core.dts>
+
+&clk_hsi48 {
+    status = "okay";
+};

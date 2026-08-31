@@ -1,0 +1,4 @@
+include:
+  - board: weact_stm32h5_core//zmk
+    shield: caveman
+    snippet: zmk-usb-logging

@@ -1,0 +1,13 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: mjw6i
+      url-base: https://github.com/mjw6i
+  projects:
+    - name: zmk
+      remote: mjw6i
+      revision: caveman
+      import: app/west.yml
+  self:
+    path: config
