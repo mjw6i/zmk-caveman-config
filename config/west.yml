@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/mjw6i
   projects:
     - name: zmk
-      remote: mjw6i
-      revision: caveman
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
