@@ -3,3 +3,29 @@
 &clk_hsi48 {
     status = "okay";
 };
+
+&sram1 {
+    reg = <0x20000000 0x3FFFF>;
+}
+
+/ {
+    sram@2003FFFF {
+        compatible = "zephyr,memory-region", "mmio-sram";
+        reg = <0x2003FFFF 0x1>;
+        zephyr,memory-region = "RetainedMem";
+        status = "okay";
+
+        retainedmem {
+            compatible = "zephyr,retained-ram";
+            status = "okay";
+            #address-cells = <1>;
+            #size-cells = <1>;
+
+            retention0: retention@0 {
+                compatible = "zephyr,retention";
+                status = "okay";
+                reg = <0x0 0x1>;
+            };
+        };
+    };
+};
