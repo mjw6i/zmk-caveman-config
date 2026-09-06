@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: mjw6i
-      revision: caveman
+      revision: hardcode
       import: app/west.yml
   self:
     path: config
