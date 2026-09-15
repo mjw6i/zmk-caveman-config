@@ -5,6 +5,6 @@
 - [x] logging
 - [x] key inputs
 - [ ] key inputs using interrupts instead of polling
-- [ ] unpatched zmk (there is a single line conflict)
+- [x] unpatched zmk
 - [ ] ZMK &bootloader key working (unlikely to be fixed)
 - [ ] tested long term
