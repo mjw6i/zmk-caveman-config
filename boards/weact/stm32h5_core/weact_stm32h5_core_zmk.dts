@@ -5,13 +5,13 @@
 };
 
 &sram1 {
-    reg = <0x20000000 0x3FFFF>;
+    reg = <0x20000000 0x3FFFC>;
 };
 
 / {
     sram@2003FFFF {
         compatible = "zephyr,memory-region", "mmio-sram";
-        reg = <0x2003FFFF 0x1>;
+        reg = <0x2003FFFC 0x4>;
         zephyr,memory-region = "RetainedMem";
         status = "okay";
 
@@ -21,11 +21,27 @@
             #address-cells = <1>;
             #size-cells = <1>;
 
-            retention0: retention@0 {
+            magic_retention: retention@0 {
                 compatible = "zephyr,retention";
                 status = "okay";
-                reg = <0x0 0x1>;
+                reg = <0x0 0x4>;
             };
+        };
+    };
+};
+
+/ {
+    magic_mapper {
+        compatible = "zmk,bootmode-to-magic-mapper";
+        status = "okay";
+
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        boot_retention: retention@0 {
+            compatible = "zephyr,retention";
+            status = "okay";
+            reg = <0x0 0x1>;
         };
     };
 };
